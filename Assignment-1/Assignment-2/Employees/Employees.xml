@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type = "text/xsl" href = "Employees.xsl"?>
+<Employees>
+    <Employee>
+        <First>John</First>
+        <Last>Smith</Last>
+        <Phone Type="Home">1-800-123-4567</Phone>
+        <Birthday>1960-05-25</Birthday>
+        <HourlyRate>35.85</HourlyRate>
+    </Employee>
+    <Employee>
+        <First>Jane</First>
+        <Last>Jones</Last>
+        <Phone Type="Cell">1-800-999-9999</Phone>
+        <Birthday>1980-11-01</Birthday>
+        <HourlyRate>58.17</HourlyRate>
+    </Employee>
+</Employees>

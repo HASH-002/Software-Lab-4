@@ -1,0 +1,24 @@
+{
+    "questions" : [
+        {
+            "question": "What is the color of the sky?",
+            "options": [
+                "Blue",
+                "Green",
+                "Yellow",
+                "Black"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which animal/bird makes a \"quack\" sound?",
+            "options": [
+                "Cat",
+                "Dog",
+                "Duck",
+                "Moose"
+            ],
+            "correct": 2 
+        }
+    ]
+}

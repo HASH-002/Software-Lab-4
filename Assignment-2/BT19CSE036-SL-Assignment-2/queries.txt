@@ -1,0 +1,44 @@
+use sl
+
+db
+
+db.createCollection("employees")
+
+show collections
+
+db.employees.insert([
+	{
+		firstname: "hasan",
+		lastname: "koser",
+		gender: "M",
+		dob: new Date('2000-11-18'),
+		companyname: "GS"	
+	},
+	{
+		firstname: "vishakha",
+		lastname: "vikhrankar",
+		gender: "F",
+		dob: new Date('2001-11-30'),
+		companyname: "De Shaw"	
+	},
+	{
+		firstname: "saurav",
+		lastname: "kalsoor",
+		gender: "M",
+		dob: new Date('2001-05-14'),
+		companyname: "Oracle"	
+	},
+	{
+		firstname: "darshan",
+		lastname: "nikam",
+		gender: "M",
+		dob: new Date('2001-11-08'),
+		companyname: "Oracle"	
+	}
+])
+
+db.employees.find().pretty();
+
+db.employees.updateMany({}, {$set : {graduation_year : 2023}});
+
+db.employees.find().pretty();

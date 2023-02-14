@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    <!--    Add relative layout properties in this section and
+remove this comment to get rid of this error. Do not remove
+any part of the given code. -->
+
+    tools:context=".PostActivity">
+
+    <!--Add appropriate layouts and components-->
+    <!--    Your Code starts here-->
+
+
+    <!--    Your Code ends here-->
+
+</RelativeLayout>

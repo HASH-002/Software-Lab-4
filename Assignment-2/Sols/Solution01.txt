@@ -1,0 +1,55 @@
+> show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+> use demo760
+switched to db demo760
+> db.demo760.insertOne({id:1,details:{Value1:100,Value2:50}});
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("620123291ebc569a4819be74")
+}
+> db.demo760.insertOne({id:2,details:{Value1:60,Value2:70}});
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("620123511ebc569a4819be75")
+}
+> db.demo760.insertOne({id:3,details:{Value1:80,Value2:90}});
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("620123661ebc569a4819be76")
+}
+> db.demo760.find();
+{ "_id" : ObjectId("620123291ebc569a4819be74"), "id" : 1, "details" : { "Value1" : 100, "Value2" : 50 } }
+{ "_id" : ObjectId("620123511ebc569a4819be75"), "id" : 2, "details" : { "Value1" : 60, "Value2" : 70 } }
+{ "_id" : ObjectId("620123661ebc569a4819be76"), "id" : 3, "details" : { "Value1" : 80, "Value2" : 90 } }
+> db.demo760.bulkWrite([{updateOne: {filter: {id: 1},update: {$set: {'details.Value1': 900, 'details.Value2': 500}}}},{updateOne: {filter: {id: 2},update: {$set: {'details.Value1': 1000,'details.Value2': 2000}}}}]);
+{
+        "acknowledged" : true,
+        "deletedCount" : 0,
+        "insertedCount" : 0,
+        "matchedCount" : 2,
+        "upsertedCount" : 0,
+        "insertedIds" : {
+
+        },
+        "upsertedIds" : {
+
+        }
+}
+> show demo760
+uncaught exception: Error: don't know how to show [demo760] :
+shellHelper.show@src/mongo/shell/utils.js:1211:11
+shellHelper@src/mongo/shell/utils.js:838:15
+@(shellhelp2):1:1
+> show db demo760
+uncaught exception: Error: don't know how to show [db] :
+shellHelper.show@src/mongo/shell/utils.js:1211:11
+shellHelper@src/mongo/shell/utils.js:838:15
+@(shellhelp2):1:1
+> db.demo.find();
+> db.demo760.find();
+{ "_id" : ObjectId("620123291ebc569a4819be74"), "id" : 1, "details" : { "Value1" : 900, "Value2" : 500 } }
+{ "_id" : ObjectId("620123511ebc569a4819be75"), "id" : 2, "details" : { "Value1" : 1000, "Value2" : 2000 } }
+{ "_id" : ObjectId("620123661ebc569a4819be76"), "id" : 3, "details" : { "Value1" : 80, "Value2" : 90 } }
+>
